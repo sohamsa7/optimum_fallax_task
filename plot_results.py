@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+original = np.load("rewards_original.npy")
+position = np.load("rewards_position.npy")
+angle = np.load("rewards_angle.npy")
+plt.figure(figsize=(10,6))
+plt.plot(original,label="Original Reward")
+plt.plot(position,label="Position Reward")
+plt.plot(angle,label="Angle Reward")
+plt.xlabel("Episode")
+plt.ylabel("Cumulative Reward")
+plt.title("Reward Hacking in CartPole")
+plt.legend()
+plt.grid(True)
+plt.show()
